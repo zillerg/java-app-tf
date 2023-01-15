@@ -85,7 +85,7 @@ pipeline {
         }
     }
     post { 
-        failure { 
+        success { 
             sh "cd Terraform && terraform destroy --auto-approve"
         }
     }
