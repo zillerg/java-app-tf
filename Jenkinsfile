@@ -86,6 +86,7 @@ pipeline {
     }
     post { 
         success { 
+            sleep(time: 100, unit: "SECONDS")
             sh "cd Terraform && terraform destroy --auto-approve"
         }
     }
